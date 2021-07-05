@@ -1,0 +1,1 @@
+react_todo_application is a utility that allows the user to manage various tasks.
