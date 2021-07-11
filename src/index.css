@@ -1,13 +1,144 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:600|Barlow:200,300,400,600,700|Overpass:300,400|Karma:300,500&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+blockquote,
+q {
+  quotes: '' '';
+}
+
+:root {
+  --primaryFont: 'Comfortaa', 'Lucida Sans', sans-serif;
+  --secondaryFont: 'Barlow', 'Trebuchet MS', sans-serif;
+  --tertiaryFont: 'Overpass', Arial, sans-serif;
+  --quaternaryFont: 'Karma', Verdana, sans-serif;
+  --tenPxFont: 0.625rem;
+  --buttonShadow: hsla(206, 6%, 25%, 0.3) 0px 1px 2px 0px, hsla(206, 6%, 25%, 0.15) 0px 2px 6px 2px;
+  --buttonShadowHover: hsla(206, 6%, 25%, 0.3) 0px 3px 2px 0px, hsla(206, 6%, 25%, 0.15) 0px 4px 6px 2px;
+}
+
+html {
+  font-size: 16px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: var(--quaternaryFont);
+}
+
+h1 {
+  font-family: var(--primaryFont);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--tertiaryFont);
+}
+
+button {
+  font-family: var(--secondaryFont);
+  font-weight: 700;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
