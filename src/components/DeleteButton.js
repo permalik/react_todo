@@ -26,9 +26,9 @@ const DeleteX = styled.img`
   width: 20px;
 `;
 
-const Delete = () => {
+const Delete = ({ onDelete }) => {
   return (
-    <DeleteButton>
+    <DeleteButton onClick={onDelete}>
       <DeleteX src={process.env.PUBLIC_URL + 'https://res.cloudinary.com/permalik/image/upload/c_scale,w_20/v1626214862/close_svg.svg'} />
     </DeleteButton>
   );

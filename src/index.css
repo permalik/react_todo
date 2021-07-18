@@ -144,3 +144,8 @@ button {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.priority {
+  border-left: 1px solid red;
+  padding-left: calc(2em - 1px) !important;
+}
