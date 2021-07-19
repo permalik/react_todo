@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AddTask from './AddTask';
 import styled from 'styled-components';
 import Tasks from './Tasks';
 
@@ -44,6 +45,10 @@ const Main = () => {
     },
   ]);
 
+  const addTask = (task) => {
+    console.log(task);
+  };
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
@@ -54,6 +59,7 @@ const Main = () => {
 
   return (
     <MainSection>
+      <AddTask onAdd={addTask} />
       <TaskWrapper>
         {tasks.length > 0 ? (
           <Tasks tasks={tasks} onDelete={deleteTask} onPriorityToggle={onPriorityToggle} />

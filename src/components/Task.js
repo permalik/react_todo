@@ -8,7 +8,7 @@ const TaskSection = styled.section`
   box-sizing: border-box;
   font-size: var(--tenPxFont);
   margin-bottom: 1rem;
-  min-width: 10rem;
+  min-width: 12rem;
   padding: 2em;
 
   @media (max-width: 600px) {
@@ -47,6 +47,7 @@ const TaskDescription = styled.p`
 
   @media (max-width: 600px) {
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 `;
 
