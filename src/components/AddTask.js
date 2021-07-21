@@ -110,12 +110,6 @@ const AddTask = ({ onAdd }) => {
       </FormControl>
       <FormControl>
         <FormHeading>
-          <FormLabel>Task</FormLabel>
-        </FormHeading>
-        <FormInput type="text" placeholder="Add Task" value={title} onChange={(e) => setTitle(e.target.value)} />
-      </FormControl>
-      <FormControl>
-        <FormHeading>
           <FormLabel>Description</FormLabel>
         </FormHeading>
         <FormInput type="text" placeholder="Describe event" value={description} onChange={(e) => setDescription(e.target.value)} />

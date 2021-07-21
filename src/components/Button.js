@@ -19,7 +19,6 @@ const ButtonComponent = styled.button`
 
   &:active {
     background: hsl(0, 0%, 0%);
-    margin-top: 1px;
   }
 
   @media (max-width: 1000px) {
