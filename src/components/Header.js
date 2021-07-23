@@ -39,15 +39,11 @@ const AddButton = styled(Button)`
   }
 `;
 
-const Header = ({ title }) => {
-  const addTask = () => {
-    console.log('Task Added');
-  };
-
+const Header = ({ title, onAdd, showAdd }) => {
   return (
     <PageHeader>
       <PageTitle>{title}</PageTitle>
-      <AddButton text="Add" onClick={addTask} />
+      <AddButton text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
     </PageHeader>
   );
 };

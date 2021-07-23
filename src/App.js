@@ -65,7 +65,7 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
       <Main>
       {showAddTask && <AddTask onAdd={addTask} />}
       <TaskWrapper>
