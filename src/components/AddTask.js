@@ -106,25 +106,45 @@ const AddTask = ({ onAdd }) => {
         <FormHeading>
           <FormLabel>Task</FormLabel>
         </FormHeading>
-        <FormInput type="text" placeholder="Add Task" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <FormInput
+          placeholder="Add Task"
+          onChange={(e) => setTitle(e.target.value)}
+          type="text"
+          value={title}
+        />
       </FormControl>
       <FormControl>
         <FormHeading>
           <FormLabel>Description</FormLabel>
         </FormHeading>
-        <FormInput type="text" placeholder="Describe event" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <FormInput
+          placeholder="Describe event"
+          onChange={(e) => setDescription(e.target.value)}
+          type="text"
+          value={description}
+        />
       </FormControl>
       <FormControl>
         <FormHeading>
           <FormLabel>Day & Time</FormLabel>
         </FormHeading>
-        <FormInput type="text" placeholder="Add Day & Time" value={date} onChange={(e) => setDate(e.target.value)} />
+        <FormInput
+          placeholder="Add Day & Time"
+          onChange={(e) => setDate(e.target.value)}
+          type="date"
+          value={date}
+        />
       </FormControl>
       <FormControl>
         <FormHeading>
           <FormLabel>Priority?</FormLabel>
         </FormHeading>
-        <FormCheckbox type="checkbox" checked={priority} value={priority} onChange={(e) => setPriority(e.currentTarget.checked)} />
+        <FormCheckbox
+          checked={priority}
+          onChange={(e) => setPriority(e.currentTarget.checked)}
+          type="checkbox"
+          value={priority}
+        />
       </FormControl>
       <FormSubmit type="submit" value="Save Task" />
     </AddForm>

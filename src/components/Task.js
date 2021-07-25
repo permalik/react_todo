@@ -24,6 +24,7 @@ const TaskHeader = styled.header`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 
   @media (max-width: 600px) {
     flex-flow: column nowrap;
@@ -33,7 +34,6 @@ const TaskHeader = styled.header`
 
 const TaskTitle = styled.h3`
   font-size: 3em;
-  margin-bottom: 0.25rem;
   white-space: nowrap;
 
   @media (max-width: 600px) {
@@ -42,12 +42,18 @@ const TaskTitle = styled.h3`
 `;
 
 const TaskDescription = styled.p`
+  display: block;
   font-size: 2em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  word-break: break-all;
+  width: 100%;
 
   @media (max-width: 600px) {
-    margin-bottom: 1.5rem;
     text-align: center;
+  }
+
+  @media (min-width: 600px) {
+    padding-left: 0.25rem;
   }
 `;
 
@@ -57,7 +63,10 @@ const TaskDate = styled.p`
 
 const Task = ({ task, onDelete, onPriorityToggle }) => {
   return (
-    <TaskSection className={`task ${task.priority ? 'priority' : ''}`} onDoubleClick={() => onPriorityToggle(task.id)}>
+    <TaskSection
+      className={`task ${task.priority ? 'priority' : ''}`}
+      onDoubleClick={() => onPriorityToggle(task.id)}
+    >
       <TaskHeader>
         <TaskTitle>{task.title}</TaskTitle>
         <Delete onDelete={() => onDelete(task.id)} />

@@ -25,29 +25,7 @@ const EmptyMessage = styled.p`
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: 'First Task',
-      description: 'Do first thing',
-      date: 'Jul 11th at 17:00',
-      priority: false,
-    },
-    {
-      id: 2,
-      title: 'Second Task',
-      description: 'Do second thing',
-      date: 'Jul 12th at 17:00',
-      priority: false,
-    },
-    {
-      id: 3,
-      title: 'Third Task',
-      description: 'Do third thing',
-      date: 'Jul 13th at 17:00',
-      priority: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1;
