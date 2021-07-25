@@ -11,14 +11,14 @@ const ButtonComponent = styled.button`
   padding: 1rem 2rem;
 
   &:hover {
-    background: ${(props) => props.theme.black};
+    border-style: outset;
     box-shadow: var(--buttonShadowHover);
-    color: ${(props) => props.theme.white};
     cursor: pointer;
   }
 
   &:active {
-    background: hsl(0, 0%, 0%);
+    border-style: inset;
+    box-shadow: hsla(206, 6%, 25%, 0.4) 0px 2px 2px 0px, hsla(206, 6%, 25%, 0.2) 0px 3px 6px 2px;
   }
 
   @media (max-width: 1000px) {
@@ -32,9 +32,9 @@ const ButtonComponent = styled.button`
   }
 `;
 
-const Button = ({ text, className, onClick }) => {
+const Button = ({ bgColor, border, color, text, className, onClick }) => {
   return (
-    <ButtonComponent className={className} onClick={onClick}>
+    <ButtonComponent className={className} onClick={onClick} style={{ background: bgColor, borderColor: border, color: color }}>
       {text}
     </ButtonComponent>
   );

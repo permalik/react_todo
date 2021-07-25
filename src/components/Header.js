@@ -24,26 +24,20 @@ const PageTitle = styled.h1`
   }
 `;
 
-const AddButton = styled(Button)`
-  border: 3px solid ${(props) => props.theme.olivine};
-  color: ${(props) => props.theme.olivine};
-
-  &:hover {
-    background: ${(props) => props.theme.olivine};
-    color: ${(props) => props.theme.white};
-    cursor: pointer;
-  }
-
-  &:active {
-    background: hsl(96, 42%, 57%);
-  }
-`;
+const AddButton = styled(Button)``;
 
 const Header = ({ title, onAdd, showAdd }) => {
   return (
     <PageHeader>
       <PageTitle>{title}</PageTitle>
-      <AddButton text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
+      <AddButton
+        // bgColor={showAdd && 'white'}
+        border={showAdd ? 'red' : 'seaGreen'}
+        className={'add-button'}
+        color={showAdd ? 'red' : 'seaGreen'}
+        text={showAdd ? 'Close' : 'Add'}
+        onClick={onAdd}
+      />
     </PageHeader>
   );
 };
