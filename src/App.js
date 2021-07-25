@@ -43,6 +43,7 @@ const App = () => {
 
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
+    localStorage.removeItem(tasks);
   };
 
   const onPriorityToggle = (id) => {
