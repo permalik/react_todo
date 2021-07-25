@@ -76,6 +76,10 @@ const FormSubmit = styled.input`
   &:active {
     background: hsl(0, 0%, 0%);
   }
+
+  &:focus {
+    outline: 2px dotted cyan;
+  }
 `;
 
 const AddTask = ({ onAdd }) => {
