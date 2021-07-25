@@ -1,5 +1,6 @@
 // import './App.css';
 import styled from "styled-components";
+import { useEffect } from 'react';
 import { useState } from 'react';
 import AddTask from './components/AddTask';
 import Header from "./components/Header";
@@ -25,7 +26,14 @@ const EmptyMessage = styled.p`
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const localData = localStorage.getItem('tasks');
+    return localData ? JSON.parse(localData) : []; 
+  });
+  
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = (task) => {
     const id = Math.floor(Math.random() * 10000) + 1;
