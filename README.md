@@ -1,1 +1,3 @@
-react_todo_application is a utility that allows the user to manage various tasks.
+react_todo is todo application enabling task entry and persistance to local storage
+
+Available here: https://jscalculatorutility.netlify.app/
